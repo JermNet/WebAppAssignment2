@@ -19,7 +19,7 @@ public class UserController {
 
     // Using Java's built in regex patterns and matchers, so I can check passwords and emails. The regexes I use here are fairly standard ones that are used for validating these things
     // Static and final because these should never change
-    private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[^.]+(\\.[A-Za-z0-9-]+)+$\n";
+    private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@(.+)$";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
     private static final String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
     private static final Pattern PASSWORD_PATTERN = Pattern.compile(PASSWORD_REGEX);
